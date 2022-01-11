@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 class PayCalculation { //실제 급여계산을 이루어주는 클래스
-    Calendar C2 = new Calendar();
+    Calendar C = new Calendar();
     StartDayFunction C3 = new StartDayFunction();
     static int pay = 9160;
     int mon=0, tue=0, wed=0,thur=0,fri=0,sat=0,sun=0;
@@ -12,7 +12,7 @@ class PayCalculation { //실제 급여계산을 이루어주는 클래스
             thur_result=0, fri_result=0, sat_result=0, sun_result=0 ;
     int monStart=0,tueStart=0,wedStart=0,
             thurStart=0,friStart=0,satStart=0,sunStart=0;
-    int[] SEVEN2 = C2.SEVEN;
+    int[] SEVEN2 = C.SEVEN;
     int[] dayCount2 = C3.dayCount;
     public void startDayConcept() { // 1일이 아닌 중간에 들어와서 근무를 시작한 경우의 메소드
         monStart = SEVEN2[0] - dayCount2[0];
