@@ -3,8 +3,7 @@ import java.util.Stack;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
-public class StartDayFunction {  //중간에 들어오거나, 중간에 나가는 사람을 계산해주는 클래스
-    Calendar C = new Calendar();
+public class StartDayFunction extends Calendar {  //중간에 들어오거나, 중간에 나가는 사람을 계산해주는 클래스
     int[] dayCount = {0,0,0,0,0,0,0};
      int share;
      int remainder;
@@ -109,25 +108,25 @@ public class StartDayFunction {  //중간에 들어오거나, 중간에 나가�
          for(int i=0; i<dayCount.length; i++) {
              dayCount[i]+=share;
          }
-         if(C.first_day.equals("월")) {
+         if(first_day.equals("월")) {
              endMon();
          }
-         if(C.first_day.equals("화")) {
+         if(first_day.equals("화")) {
              endTue();
          }
-         if(C.first_day.equals("수")) {
+         if(first_day.equals("수")) {
              endWed();
          }
-         if(C.first_day.equals("목")) {
+         if(first_day.equals("목")) {
              endThur();
          }
-         if(C.first_day.equals("금")) {
+         if(first_day.equals("금")) {
              endFri();
          }
-         if(C.first_day.equals("토")) {
+         if(first_day.equals("토")) {
              endSat();
          }
-         if(C.first_day.equals("일")) {
+         if(first_day.equals("일")) {
              endSun();
          }
 
@@ -138,25 +137,25 @@ public class StartDayFunction {  //중간에 들어오거나, 중간에 나가�
          for(int i=0; i<dayCount.length; i++) {
              dayCount[i]+=share;
          }
-         if(C.first_day.equals("월")) {
+         if(first_day.equals("월")) {
              endMon();
          }
-         if(C.first_day.equals("화")) {
+         if(first_day.equals("화")) {
              endTue();
          }
-         if(C.first_day.equals("수")) {
+         if(first_day.equals("수")) {
              endWed();
          }
-         if(C.first_day.equals("목")) {
+         if(first_day.equals("목")) {
              endThur();
          }
-         if(C.first_day.equals("금")) {
+         if(first_day.equals("금")) {
              endFri();
          }
-         if(C.first_day.equals("토")) {
+         if(first_day.equals("토")) {
              endSat();
          }
-         if(C.first_day.equals("일")) {
+         if(first_day.equals("일")) {
              endSun();
          }
      }
