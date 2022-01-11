@@ -1,17 +1,18 @@
 public class Execute {
     public static void main(String[] args) {
-        Worker c1 = new Worker();
+        Worker c2 = new Worker();
+        Calendar c1 = new Calendar();
         c1.input();
         c1.leapYear();
         c1.startFind();
-        c1.Jung_yun();
-        c1.Hee_jun();
-        c1.Chae_young();
-        c1.Jae_lim();
-        c1.Su_yun();
-        c1.Ga_eun();
-        c1.Min_ji();
-        c1.Se_bin();
-        c1.Chae_eun();
+        c2.Jung_yun();
+        c2.Hee_jun();
+        c2.Chae_young();
+        c2.Jae_lim();
+        c2.Su_yun();
+        c2.Ga_eun();
+        c2.Min_ji();
+        c2.Se_bin();
+        c2.Chae_eun();
     }
 }
