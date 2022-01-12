@@ -6,7 +6,7 @@ import java.util.Comparator;
 class Worker extends Option{ //근무자들의 정보를 담아낸 클래스
     Scanner sc = new Scanner(System.in);
     int cutIn=0;
-    public void Jung_yun() {
+    public void Hyun_song() {
         mon = 4;
         tue = 4;
         wed = 3;
@@ -16,7 +16,7 @@ class Worker extends Option{ //근무자들의 정보를 담아낸 클래스
         System.out.println("중간에 나갔습니까? 맞으면 1을 입력해주세요");
         cutIn = sc.nextInt();
         if(cutIn == 1) {
-            cutIn();
+
             endFind();
             startDayConcept();
             cutInPayCalculate();
@@ -131,36 +131,7 @@ class Worker extends Option{ //근무자들의 정보를 담아낸 클래스
         discrimin();
         countInitialization();
     }
-    public void Su_yun() {
-        sat = 6;
-        sun = 8;
-        System.out.println("수연의 근무시작일을 입력해주세요");
-        startDayInput = sc.nextInt();
-        System.out.println("중간에 나갔습니까? 맞으면 1을 입력해주세요");
-        cutIn = sc.nextInt();
-        if(cutIn == 1) {
-            endFind();
-            startDayConcept();
-            cutInPayCalculate();
-            result = mon_result + tue_result+ wed_result+thur_result;
-
-        }
-        else {
-            if(startDayInput > 1) {
-                endFind();
-                //근무시작날짜
-                startDayConcept();
-                startDayPayCalculate();
-                result = sat_result +sun_result;
-            } else{
-                payCalculate();
-                result = sat_result + sun_result;
-            }
-        }
-        discrimin();
-        countInitialization();
-    }
-    public void Ga_eun() {
+    public void Yu_won() {
         mon = 3;
         tue = 3;
         wed = 4;
