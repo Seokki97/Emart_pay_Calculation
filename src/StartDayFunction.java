@@ -131,34 +131,6 @@ public class StartDayFunction extends Calendar {  //중간에 들어오거나, �
          }
 
      }
-     public void cutIn() { //중간에 나간 사람을 계산하기 위한 메소드
-         share = (startDayInput /7);
-         remainder = (startDayInput % 7)+1;
-         for(int i=0; i<dayCount.length; i++) {
-             dayCount[i]+=share;
-         }
-         if(first_day.equals("월")) {
-             endMon();
-         }
-         if(first_day.equals("화")) {
-             endTue();
-         }
-         if(first_day.equals("수")) {
-             endWed();
-         }
-         if(first_day.equals("목")) {
-             endThur();
-         }
-         if(first_day.equals("금")) {
-             endFri();
-         }
-         if(first_day.equals("토")) {
-             endSat();
-         }
-         if(first_day.equals("일")) {
-             endSun();
-         }
-     }
      public void countInitialization() { //dayCount를 초기화해줘야 하기 때문에 만든 메소드
          for(int i = 0; i< 7; i++) {
              dayCount[i] = 0;
