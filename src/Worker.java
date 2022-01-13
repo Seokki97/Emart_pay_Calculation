@@ -11,7 +11,7 @@ class Worker extends Option{ //근무자들의 정보를 담아낸 클래스
         tue = 4;
         wed = 3;
         thur = 3;
-        System.out.println("정연의 근무시작일을 입력해주세요");
+        System.out.println("현송의 근무시작일을 입력해주세요");
         startDayInput = sc.nextInt() ;
         System.out.println("중간에 나갔습니까? 맞으면 1을 입력해주세요");
         cutIn = sc.nextInt();
@@ -136,7 +136,7 @@ class Worker extends Option{ //근무자들의 정보를 담아낸 클래스
         tue = 3;
         wed = 4;
         thur = 4;
-        System.out.println("가영의 근무시작일을 입력해주세요");
+        System.out.println("여원의 근무시작일을 입력해주세요");
         startDayInput = sc.nextInt();
         System.out.println("중간에 나갔습니까? 맞으면 1을 입력해주세요");
         cutIn = sc.nextInt();
