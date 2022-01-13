@@ -1,8 +1,9 @@
 public class Execute {
     public static void main(String[] args) {
         Worker c2 = new Worker();
-
-        c2.input();
+        c2.inputYear();
+        c2.inputMonth();
+        c2.inputDay();
         c2.leapYear();
         c2.startFind();
         c2.Hyun_song();
