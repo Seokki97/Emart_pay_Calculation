@@ -4,21 +4,15 @@ class Worker extends PayCalculation{ //근무자들의 정보를 담아낸 클�
     Option C1 = new Option();
     int cutIn=0;
     public void Hyun_song() {
-        mon = 4;
-        tue = 4;
-        wed = 3;
-        thur = 3;
         System.out.println("현송의 근무시작일을 입력해주세요");
         startDayInput = sc.nextInt() ;
         System.out.println("중간에 나갔습니까? 맞으면 1을 입력해주세요");
         cutIn = sc.nextInt();
         if(cutIn == 1) {
-
             endFind();
             startDayConcept();
             cutInPayCalculate();
            C1.result = mon_result + tue_result+ wed_result+thur_result;
-
         }
         else{
             if(startDayInput > 1) {
@@ -33,9 +27,9 @@ class Worker extends PayCalculation{ //근무자들의 정보를 담아낸 클�
                 C1.result = mon_result + tue_result + wed_result+ thur_result;
             }
         }
-
         C1.discrimin();
         countInitialization();
+
     }
     public void Hee_jun() {
         mon = 5;

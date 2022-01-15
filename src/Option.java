@@ -32,6 +32,7 @@ class Option { //추가적인 기능(추가, 감소근무)을 나타내는 클�
         else if(plusMinus.equals("0")) {
             System.out.println("급여는" +result+"입니다.");
         }
+
     }
 
 }
