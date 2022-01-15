@@ -3,8 +3,9 @@ import java.util.Stack;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
-class Option extends PayCalculation{ //추가적인 기능(추가, 감소근무)을 나타내는 클래스
+class Option { //추가적인 기능(추가, 감소근무)을 나타내는 클래스
     Scanner sc = new Scanner(System.in);
+    static int pay = 9160;
     String plusMinus;
     int result=0;
     int plusTime, minusTime;
