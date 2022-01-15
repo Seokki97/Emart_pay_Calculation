@@ -1,8 +1,4 @@
 import java.util.Scanner;
-import java.util.Stack;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Comparator;
 class Worker extends PayCalculation{ //근무자들의 정보를 담아낸 클래스
     Scanner sc = new Scanner(System.in);
     Option C1 = new Option();

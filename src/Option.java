@@ -1,8 +1,5 @@
 import java.util.Scanner;
-import java.util.Stack;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Comparator;
+
 class Option { //추가적인 기능(추가, 감소근무)을 나타내는 클래스
     Scanner sc = new Scanner(System.in);
     static int pay = 9160;

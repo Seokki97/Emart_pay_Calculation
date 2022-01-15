@@ -1,8 +1,4 @@
-import java.util.Scanner;
-import java.util.Stack;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Comparator;
+
 class PayCalculation extends StartDayFunction{ //실제 급여계산을 이루어주는 클래스
     static int pay = 9160;
     int mon=0, tue=0, wed=0,thur=0,fri=0,sat=0,sun=0;
