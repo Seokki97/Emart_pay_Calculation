@@ -3,8 +3,9 @@ import java.util.Stack;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
-class Worker extends Option{ //근무자들의 정보를 담아낸 클래스
+class Worker extends PayCalculation{ //근무자들의 정보를 담아낸 클래스
     Scanner sc = new Scanner(System.in);
+    Option C1 = new Option();
     int cutIn=0;
     public void Hyun_song() {
         mon = 4;
@@ -20,7 +21,7 @@ class Worker extends Option{ //근무자들의 정보를 담아낸 클래스
             endFind();
             startDayConcept();
             cutInPayCalculate();
-            result = mon_result + tue_result+ wed_result+thur_result;
+           C1.result = mon_result + tue_result+ wed_result+thur_result;
 
         }
         else{
@@ -29,15 +30,15 @@ class Worker extends Option{ //근무자들의 정보를 담아낸 클래스
                 startDayConcept();
                 //총결과
                 startDayPayCalculate();
-                result = mon_result + tue_result + wed_result+ thur_result;
+                C1.result = mon_result + tue_result + wed_result+ thur_result;
 
             } else {
                 payCalculate();
-                result = mon_result + tue_result + wed_result+ thur_result;
+                C1.result = mon_result + tue_result + wed_result+ thur_result;
             }
         }
 
-        discrimin();
+        C1.discrimin();
         countInitialization();
     }
     public void Hee_jun() {
@@ -53,7 +54,7 @@ class Worker extends Option{ //근무자들의 정보를 담아낸 클래스
             endFind();
             startDayConcept();
             cutInPayCalculate();
-            result = mon_result + tue_result+ wed_result+thur_result;
+            C1.result = mon_result + tue_result+ wed_result+thur_result;
 
         }
         else{
@@ -62,14 +63,14 @@ class Worker extends Option{ //근무자들의 정보를 담아낸 클래스
                 //시작날짜 반영
                 startDayConcept();
                 startDayPayCalculate();
-                result = mon_result + tue_result + thur_result + sat_result +sun_result;
+                C1.result = mon_result + tue_result + thur_result + sat_result +sun_result;
             }
             else{
                 payCalculate();
-                result = mon_result + tue_result + wed_result+ thur_result + sat_result;
+                C1.result = mon_result + tue_result + wed_result+ thur_result + sat_result;
             }
         }
-        discrimin();
+        C1.discrimin();
         countInitialization();
     }
     public void Chae_young() {
@@ -83,7 +84,7 @@ class Worker extends Option{ //근무자들의 정보를 담아낸 클래스
             endFind();
             startDayConcept();
             cutInPayCalculate();
-            result = mon_result + tue_result+ wed_result+thur_result;
+            C1.result = mon_result + tue_result+ wed_result+thur_result;
 
         }
         else {
@@ -92,13 +93,13 @@ class Worker extends Option{ //근무자들의 정보를 담아낸 클래스
                 //근무시작날짜
                 startDayConcept();
                 startDayPayCalculate();
-                result = thur_result+fri_result;
+                C1.result = thur_result+fri_result;
             } else{
                 payCalculate();
-                result = thur_result + fri_result;
+                C1.result = thur_result + fri_result;
             }
         }
-        discrimin();
+        C1.discrimin();
         countInitialization();
     }
     public void Jae_lim() {
@@ -112,7 +113,7 @@ class Worker extends Option{ //근무자들의 정보를 담아낸 클래스
             endFind();
             startDayConcept();
             cutInPayCalculate();
-            result = mon_result + tue_result+ wed_result+thur_result;
+            C1.result = mon_result + tue_result+ wed_result+thur_result;
 
         }
         else {
@@ -121,13 +122,13 @@ class Worker extends Option{ //근무자들의 정보를 담아낸 클래스
                 //근무시작날짜
                 startDayConcept();
                 startDayPayCalculate();
-                result =fri_result+sat_result;
+                C1.result =fri_result+sat_result;
             } else{
                 payCalculate();
-                result = fri_result+sat_result;
+                C1.result = fri_result+sat_result;
             }
         }
-        discrimin();
+        C1.discrimin();
         countInitialization();
     }
     public void Yu_won() {
@@ -143,7 +144,7 @@ class Worker extends Option{ //근무자들의 정보를 담아낸 클래스
             endFind();
             startDayConcept();
             cutInPayCalculate();
-            result = mon_result + tue_result+ wed_result+thur_result;
+            C1.result = mon_result + tue_result+ wed_result+thur_result;
 
         }
         else {
@@ -152,13 +153,13 @@ class Worker extends Option{ //근무자들의 정보를 담아낸 클래스
                 //근무시작날자
                 startDayConcept();
                 startDayPayCalculate();
-                result = mon_result+tue_result+wed_result+thur_result;
+                C1.result = mon_result+tue_result+wed_result+thur_result;
             }else{
                 payCalculate();
-                result = mon_result + tue_result + wed_result + thur_result;
+                C1.result = mon_result + tue_result + wed_result + thur_result;
             }
         }
-        discrimin();
+        C1.discrimin();
         countInitialization();
     }
     public void Min_ji() {
@@ -172,7 +173,7 @@ class Worker extends Option{ //근무자들의 정보를 담아낸 클래스
             endFind();
             startDayConcept();
             cutInPayCalculate();
-            result = mon_result + tue_result+ wed_result+thur_result;
+            C1.result = mon_result + tue_result+ wed_result+thur_result;
 
         }
         else {
@@ -181,13 +182,13 @@ class Worker extends Option{ //근무자들의 정보를 담아낸 클래스
                 //시작날짜 반영
                 startDayConcept();
                 startDayPayCalculate();
-                result = mon_result + tue_result;
+                C1.result = mon_result + tue_result;
             }else{
                 payCalculate();
-                result = mon_result+ tue_result;
+                C1.result = mon_result+ tue_result;
             }
         }
-        discrimin();
+        C1.discrimin();
         countInitialization();
     }
     public void Se_bin() {
@@ -202,21 +203,21 @@ class Worker extends Option{ //근무자들의 정보를 담아낸 클래스
             endFind();
             startDayConcept();
             cutInPayCalculate();
-            result = mon_result + tue_result+ wed_result+thur_result;
+            C1.result = mon_result + tue_result+ wed_result+thur_result;
         }
         else {
             if(startDayInput > 1) {
                 endFind();
                 startDayConcept();
                 startDayPayCalculate();
-                result = thur_result+fri_result+sat_result;
+                C1.result = thur_result+fri_result+sat_result;
 
             }else{
                 payCalculate();
-                result = thur_result + fri_result + sat_result;
+                C1.result = thur_result + fri_result + sat_result;
             }
         }
-        discrimin();
+        C1.discrimin();
         countInitialization();
     }
     public void Chae_eun() {
@@ -230,7 +231,7 @@ class Worker extends Option{ //근무자들의 정보를 담아낸 클래스
             endFind();
             startDayConcept();
             cutInPayCalculate();
-            result = mon_result + tue_result+ wed_result+thur_result;
+            C1.result = mon_result + tue_result+ wed_result+thur_result;
 
         }
         else {
@@ -238,14 +239,14 @@ class Worker extends Option{ //근무자들의 정보를 담아낸 클래스
                 endFind();
                 startDayConcept();
                 startDayPayCalculate();
-                result = wed_result+ thur_result;
+                C1.result = wed_result+ thur_result;
 
             }else{
                 payCalculate();
-                result = wed_result+ thur_result;
+                C1.result = wed_result+ thur_result;
             }
         }
-        discrimin();
+        C1.discrimin();
         countInitialization();
     }
     public void cutInWorker() {//대타자
