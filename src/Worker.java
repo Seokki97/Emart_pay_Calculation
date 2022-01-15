@@ -58,7 +58,6 @@ class Worker extends Option{ //근무자들의 정보를 담아낸 클래스
         }
         else{
             if(startDayInput > 1) {
-
                 endFind();
                 //시작날짜 반영
                 startDayConcept();
@@ -204,7 +203,6 @@ class Worker extends Option{ //근무자들의 정보를 담아낸 클래스
             startDayConcept();
             cutInPayCalculate();
             result = mon_result + tue_result+ wed_result+thur_result;
-
         }
         else {
             if(startDayInput > 1) {
