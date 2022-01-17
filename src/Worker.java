@@ -3,6 +3,21 @@ class Worker extends PayCalculation{ //근무자들의 정보를 담아낸 클�
     Scanner sc = new Scanner(System.in);
     Option C1 = new Option();
     int cutIn=0;
+    public void cutInPayResult(){
+        endFind();
+        startDayConcept();
+        cutInPayCalculate();
+    }
+    public void startDayPayResult(){
+
+        endFind();
+        startDayConcept();
+        startDayPayCalculate();
+    }
+    public void totalResult(){
+        C1.discrimin();
+        countInitialization();
+        C1.totalPay();}
     public void Hyun_song() {
         mon =4; tue =4; wed =3; thur =3;
         System.out.println("현송의 근무시작일을 입력해주세요");
@@ -10,26 +25,19 @@ class Worker extends PayCalculation{ //근무자들의 정보를 담아낸 클�
         System.out.println("중간에 나갔습니까? 맞으면 1을 입력해주세요");
         cutIn = sc.nextInt();
         if(cutIn == 1) {
-            endFind();
-            startDayConcept();
-            cutInPayCalculate();
+            cutInPayResult();
            C1.result = mon_result + tue_result+ wed_result+thur_result;
         }
         else{
             if(startDayInput > 1) {
-                endFind();
-                startDayConcept();
-                //총결과
-                startDayPayCalculate();
+                startDayPayResult();
                 C1.result = mon_result + tue_result + wed_result+ thur_result;
             } else {
                 payCalculate();
                 C1.result = mon_result + tue_result + wed_result+ thur_result;
             }
         }
-        C1.discrimin();
-        countInitialization();
-        C1.totalPay();
+        totalResult();
 
     }
     public void Hee_jun() {
@@ -39,18 +47,13 @@ class Worker extends PayCalculation{ //근무자들의 정보를 담아낸 클�
         System.out.println("중간에 나갔습니까? 맞으면 1을 입력해주세요");
         cutIn = sc.nextInt();
         if(cutIn == 1) {
-            endFind();
-            startDayConcept();
-            cutInPayCalculate();
+            cutInPayResult();
             C1.result = mon_result + tue_result+ wed_result+thur_result;
 
         }
         else{
             if(startDayInput > 1) {
-                endFind();
-                //시작날짜 반영
-                startDayConcept();
-                startDayPayCalculate();
+                startDayPayResult();
                 C1.result = mon_result + tue_result + thur_result + sat_result +sun_result;
             }
             else{
@@ -58,11 +61,7 @@ class Worker extends PayCalculation{ //근무자들의 정보를 담아낸 클�
                 C1.result = mon_result + tue_result + wed_result+ thur_result + sat_result;
             }
         }
-        C1.discrimin();
-        countInitialization();
-        C1.totalPay();
-
-
+        totalResult();
     }
     public void Chae_young() {
         thur = 4; fri = 10;
@@ -71,27 +70,20 @@ class Worker extends PayCalculation{ //근무자들의 정보를 담아낸 클�
         System.out.println("중간에 나갔습니까? 맞으면 1을 입력해주세요");
         cutIn = sc.nextInt();
         if(cutIn == 1) {
-            endFind();
-            startDayConcept();
-            cutInPayCalculate();
+            cutInPayResult();
             C1.result = mon_result + tue_result+ wed_result+thur_result;
 
         }
         else {
             if(startDayInput > 1) {
-                endFind();
-                //근무시작날짜
-                startDayConcept();
-                startDayPayCalculate();
+                startDayPayResult();
                 C1.result = thur_result+fri_result;
             } else{
                 payCalculate();
                 C1.result = thur_result + fri_result;
             }
         }
-        C1.discrimin();
-        countInitialization();
-        C1.totalPay();
+        totalResult();
     }
     public void Jae_lim() {
         fri = 6; sat = 5;
@@ -100,27 +92,20 @@ class Worker extends PayCalculation{ //근무자들의 정보를 담아낸 클�
         System.out.println("중간에 나갔습니까? 맞으면 1을 입력해주세요");
         cutIn = sc.nextInt();
         if(cutIn == 1) {
-            endFind();
-            startDayConcept();
-            cutInPayCalculate();
+            cutInPayResult();
             C1.result = mon_result + tue_result+ wed_result+thur_result;
 
         }
         else {
             if(startDayInput > 1) {
-                //endFind();
-                //근무시작날짜
-                startDayConcept();
-                startDayPayCalculate();
+                startDayPayResult();
                 C1.result =fri_result+sat_result;
             } else{
                 payCalculate();
                 C1.result = fri_result+sat_result;
             }
         }
-        C1.discrimin();
-        countInitialization();
-        C1.totalPay();
+        totalResult();
     }
     public void Yu_won() {
         mon = 3; tue = 3; wed = 4; thur = 4;
@@ -129,27 +114,20 @@ class Worker extends PayCalculation{ //근무자들의 정보를 담아낸 클�
         System.out.println("중간에 나갔습니까? 맞으면 1을 입력해주세요");
         cutIn = sc.nextInt();
         if(cutIn == 1) {
-            endFind();
-            startDayConcept();
-            cutInPayCalculate();
+            cutInPayResult();
             C1.result = mon_result + tue_result+ wed_result+thur_result;
 
         }
         else {
             if(startDayInput > 1) {
-                endFind();
-                //근무시작날자
-                startDayConcept();
-                startDayPayCalculate();
+                startDayPayResult();
                 C1.result = mon_result+tue_result+wed_result+thur_result;
             }else{
                 payCalculate();
                 C1.result = mon_result + tue_result + wed_result + thur_result;
             }
         }
-        C1.discrimin();
-        countInitialization();
-        C1.totalPay();
+        totalResult();
     }
     public void Min_ji() {
         mon = 7; tue = 7;
@@ -158,27 +136,20 @@ class Worker extends PayCalculation{ //근무자들의 정보를 담아낸 클�
         System.out.println("중간에 나갔습니까? 맞으면 1을 입력해주세요");
         cutIn = sc.nextInt();
         if(cutIn == 1) {
-            endFind();
-            startDayConcept();
-            cutInPayCalculate();
+            cutInPayResult();
             C1.result = mon_result + tue_result+ wed_result+thur_result;
 
         }
         else {
             if(startDayInput > 1) {
-                endFind();
-                //시작날짜 반영
-                startDayConcept();
-                startDayPayCalculate();
+                startDayPayResult();
                 C1.result = mon_result + tue_result;
             }else{
                 payCalculate();
                 C1.result = mon_result+ tue_result;
             }
         }
-        C1.discrimin();
-        countInitialization();
-        C1.totalPay();
+        totalResult();
     }
     public void Se_bin() {
         thur = 4; fri =4; sat = 3;
@@ -187,16 +158,12 @@ class Worker extends PayCalculation{ //근무자들의 정보를 담아낸 클�
         System.out.println("중간에 나갔습니까? 맞으면 1을 입력해주세요");
         cutIn = sc.nextInt();
         if(cutIn == 1) {
-            endFind();
-            startDayConcept();
-            cutInPayCalculate();
+            cutInPayResult();
             C1.result = mon_result + tue_result+ wed_result+thur_result;
         }
         else {
             if(startDayInput > 1) {
-                endFind();
-                startDayConcept();
-                startDayPayCalculate();
+                startDayPayResult();
                 C1.result = thur_result+fri_result+sat_result;
 
             }else{
@@ -204,9 +171,7 @@ class Worker extends PayCalculation{ //근무자들의 정보를 담아낸 클�
                 C1.result = thur_result + fri_result + sat_result;
             }
         }
-        C1.discrimin();
-        countInitialization();
-        C1.totalPay();
+        totalResult();
     }
     public void Chae_eun() {
         wed = 7; thur =4;
@@ -215,16 +180,12 @@ class Worker extends PayCalculation{ //근무자들의 정보를 담아낸 클�
         System.out.println("중간에 나갔습니까? 맞으면 1을 입력해주세요");
         cutIn = sc.nextInt();
         if(cutIn == 1) {
-            endFind();
-            startDayConcept();
-            cutInPayCalculate();
+            cutInPayResult();
             C1.result = mon_result + tue_result+ wed_result+thur_result;
         }
         else {
             if(startDayInput > 1) {
-                endFind();
-                startDayConcept();
-                startDayPayCalculate();
+                startDayPayResult();
                 C1.result = wed_result+ thur_result;
 
             }else{
@@ -232,11 +193,10 @@ class Worker extends PayCalculation{ //근무자들의 정보를 담아낸 클�
                 C1.result = wed_result+ thur_result;
             }
         }
-        C1.discrimin();
-        countInitialization();
-        C1.totalPay();
+        totalResult();
         System.out.println( "이마트24 당산점" +month+ "월의 총 급여액은" +C1.totalPay+ "입니다." );
     }
+
 }
 
 
