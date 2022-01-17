@@ -7,6 +7,7 @@ class Option { //추가적인 기능(추가, 감소근무)을 나타내는 클�
     int result=0;
     int plusTime, minusTime;
     int plusPay=0, minusPay=0;
+    int totalPay = 0;
     public void plusPay() { //추가근무페이를 더해주는 메소드
         System.out.println("추가근무 시간을 입력해주세요");
         plusTime = sc.nextInt();
@@ -34,5 +35,7 @@ class Option { //추가적인 기능(추가, 감소근무)을 나타내는 클�
         }
 
     }
-
+ public void totalPay(){
+        totalPay +=result;
+ }
 }
