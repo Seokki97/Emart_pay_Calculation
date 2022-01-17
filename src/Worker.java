@@ -29,6 +29,8 @@ class Worker extends PayCalculation{ //근무자들의 정보를 담아낸 클�
         }
         C1.discrimin();
         countInitialization();
+        C1.totalPay();
+
     }
     public void Hee_jun() {
         mon = 5; tue = 5; sat = 10; sun = 8;
@@ -58,6 +60,9 @@ class Worker extends PayCalculation{ //근무자들의 정보를 담아낸 클�
         }
         C1.discrimin();
         countInitialization();
+        C1.totalPay();
+
+
     }
     public void Chae_young() {
         thur = 4; fri = 10;
@@ -86,6 +91,7 @@ class Worker extends PayCalculation{ //근무자들의 정보를 담아낸 클�
         }
         C1.discrimin();
         countInitialization();
+        C1.totalPay();
     }
     public void Jae_lim() {
         fri = 6; sat = 5;
@@ -114,6 +120,7 @@ class Worker extends PayCalculation{ //근무자들의 정보를 담아낸 클�
         }
         C1.discrimin();
         countInitialization();
+        C1.totalPay();
     }
     public void Yu_won() {
         mon = 3; tue = 3; wed = 4; thur = 4;
@@ -142,6 +149,7 @@ class Worker extends PayCalculation{ //근무자들의 정보를 담아낸 클�
         }
         C1.discrimin();
         countInitialization();
+        C1.totalPay();
     }
     public void Min_ji() {
         mon = 7; tue = 7;
@@ -170,6 +178,7 @@ class Worker extends PayCalculation{ //근무자들의 정보를 담아낸 클�
         }
         C1.discrimin();
         countInitialization();
+        C1.totalPay();
     }
     public void Se_bin() {
         thur = 4; fri =4; sat = 3;
@@ -197,6 +206,7 @@ class Worker extends PayCalculation{ //근무자들의 정보를 담아낸 클�
         }
         C1.discrimin();
         countInitialization();
+        C1.totalPay();
     }
     public void Chae_eun() {
         wed = 7; thur =4;
@@ -224,6 +234,8 @@ class Worker extends PayCalculation{ //근무자들의 정보를 담아낸 클�
         }
         C1.discrimin();
         countInitialization();
+        C1.totalPay();
+        System.out.println( "이마트24 당산점" +month+ "월의 총 급여액은" +C1.totalPay+ "입니다." );
     }
 }
 
