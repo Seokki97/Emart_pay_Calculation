@@ -7,17 +7,17 @@ class Worker extends PayCalculation{ //근무자들의 정보를 담아낸 클�
         endFind();
         startDayConcept();
         cutInPayCalculate();
-    }
+    } //중간에 끼는사람꺼의 메소드 종합
     public void startDayPayResult(){
 
         endFind();
         startDayConcept();
         startDayPayCalculate();
-    }
+    } //시작날짜반영 메소드 총합
     public void totalResult(){
         C1.discrimin();
         countInitialization();
-        C1.totalPay();}
+        C1.totalPay();} //토탈결과값 출력메소드 총합
     public void Hyun_song() {
         mon =4; tue =4; wed =3; thur =3;
         System.out.println("현송의 근무시작일을 입력해주세요");
