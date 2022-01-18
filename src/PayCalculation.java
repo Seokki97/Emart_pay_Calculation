@@ -1,6 +1,4 @@
-import java.util.Scanner;
 class PayCalculation extends StartDayFunction{ //실제 급여계산을 이루어주는 클래스
-    Scanner sc = new Scanner(System.in);
     static int pay = 9160;
     int mon=0, tue=0, wed=0,thur=0,fri=0,sat=0,sun=0;
     int mon_result=0, tue_result=0, wed_result=0,

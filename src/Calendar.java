@@ -10,7 +10,6 @@ public class Calendar { //입력한 달에 월요일~일요일이 각 몇번 있
         year = sc.nextInt();
         System.out.println("월을 입력하세요");
         month = sc.nextInt();
-
         System.out.println("시작 요일을 입력하세요");
         first_day = sc.next();
     }
@@ -33,7 +32,6 @@ public class Calendar { //입력한 달에 월요일~일요일이 각 몇번 있
                 for(int j =0; j<2 ; j++) {
                     SEVEN[j] +=1;
                 }
-
             }
         }
     }
@@ -47,7 +45,6 @@ public class Calendar { //입력한 달에 월요일~일요일이 각 몇번 있
                     SEVEN[j] +=1;
                 }
             }
-
         }
     }
     public void startWed() {//input값에 따라 해당 월의 수요일의 개수를 counting
@@ -60,7 +57,6 @@ public class Calendar { //입력한 달에 월요일~일요일이 각 몇번 있
                     SEVEN[j] +=1;
                 }
             }
-
         }
     }
     public void startThur() {//input값에 따라 해당 월의 목요일의 개수를 counting
@@ -72,7 +68,6 @@ public class Calendar { //입력한 달에 월요일~일요일이 각 몇번 있
                 for(int j=3; j<5; j++) {
                     SEVEN[j] +=1;
                 }
-
             }
         }
     }
@@ -85,7 +80,6 @@ public class Calendar { //입력한 달에 월요일~일요일이 각 몇번 있
                 for(int j=4; j<6; j++) {
                     SEVEN[j] +=1;
                 }
-
             }
         }
     }
@@ -100,7 +94,6 @@ public class Calendar { //입력한 달에 월요일~일요일이 각 몇번 있
             for(int j =5; j<7; j++) {
                 SEVEN[j]+=1;
             }
-
         }
     }
     public void startSun() {//input값에 따라 해당 월의 일요일의 개수를 counting
@@ -113,10 +106,7 @@ public class Calendar { //입력한 달에 월요일~일요일이 각 몇번 있
                 SEVEN[0] +=1;
             }
         }
-
     }
-
-
     public void startFind() { //input에 요일 입력을 하면 그에 따른 메소드가 실행
         monthDay = days[month-1];
         if(first_day.equals("월"))	{

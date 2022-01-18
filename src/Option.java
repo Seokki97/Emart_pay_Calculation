@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 class Option { //추가적인 기능(추가, 감소근무)을 나타내는 클래스
     Scanner sc = new Scanner(System.in);
     static int pay = 9160;
@@ -17,7 +16,6 @@ class Option { //추가적인 기능(추가, 감소근무)을 나타내는 클�
         System.out.println("근무감소 시간을 입력해주세요");
         minusTime = sc.nextInt();
         minusPay = minusTime*pay;
-
     }
     public void discrimin() { //총 결과값들을 출력해주는 메소드
         System.out.println("추가근무가 있으면 '추가', 근무 감소가 있다면 '감소', 없다면 0을 입력해주세요");
@@ -33,7 +31,6 @@ class Option { //추가적인 기능(추가, 감소근무)을 나타내는 클�
         else if(plusMinus.equals("0")) {
             System.out.println("급여는" +result+"입니다.");
         }
-
     }
  public void totalPay(){
         totalPay +=result;
