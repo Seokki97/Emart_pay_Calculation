@@ -37,34 +37,42 @@ class Worker extends PayCalculation{ //근무자들의 정보를 담아낸 클�
     }
     public void Hyun_song() {
         mon =4; tue =4; wed =3; thur =3;
+        System.out.println("현송");
         selectKind();
     }
     public void Hee_jun() {
         mon = 5; tue = 5; sat = 10; sun = 8;
+        System.out.println("희준");
         selectKind();
     }
     public void Chae_young() {
         thur = 4; fri = 10;
+        System.out.println("채영");
         selectKind();
     }
     public void Jae_lim() {
         fri = 6; sat = 5;
+        System.out.println("재림");
         selectKind();
           }
     public void Yu_won() {
         mon = 3; tue = 3; wed = 4; thur = 4;
+        System.out.println("여원");
         selectKind();
     }
     public void Min_ji() {
         mon = 7; tue = 7;
+        System.out.println("민지");
         selectKind();
     }
     public void Se_bin() {
         thur = 4; fri =4; sat = 3;
+        System.out.println("세빈");
         selectKind();
     }
     public void Chae_eun() {
         wed = 7; thur =4;
+        System.out.println("채은");
         selectKind();
         System.out.println( "이마트24 당산점" +month+ "월의 총 급여액은" +C1.totalPay+ "입니다." );
     }
