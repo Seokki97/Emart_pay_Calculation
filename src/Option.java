@@ -4,7 +4,7 @@ class Option { //추가적인 기능(추가, 감소근무)을 나타내는 클�
     Scanner sc = new Scanner(System.in);
     static int pay = 9160;
     String plusMinus;
-    int result=0;
+   int result=0;
     int plusTime, minusTime;
     int plusPay=0, minusPay=0;
     int totalPay = 0;
@@ -37,6 +37,5 @@ class Option { //추가적인 기능(추가, 감소근무)을 나타내는 클�
     }
  public void totalPay(){
         totalPay +=result;
- }
-
+}
 }
