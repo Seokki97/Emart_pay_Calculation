@@ -1,11 +1,13 @@
-
+import java.util.Scanner;
 class PayCalculation extends StartDayFunction{ //실제 급여계산을 이루어주는 클래스
+    Scanner sc = new Scanner(System.in);
     static int pay = 9160;
     int mon=0, tue=0, wed=0,thur=0,fri=0,sat=0,sun=0;
     int mon_result=0, tue_result=0, wed_result=0,
             thur_result=0, fri_result=0, sat_result=0, sun_result=0 ;
     int monStart=0,tueStart=0,wedStart=0,
             thurStart=0,friStart=0,satStart=0,sunStart=0;
+    int select;
     public void startDayConcept() { // 1일이 아닌 중간에 들어와서 근무를 시작한 경우의 메소드
         monStart = SEVEN[0] - dayCount[0];
         tueStart = SEVEN[1] - dayCount[1];
@@ -42,4 +44,6 @@ class PayCalculation extends StartDayFunction{ //실제 급여계산을 이루�
         sat_result = sat*dayCount[5]*pay;
         sun_result = sun*dayCount[6]*pay;
     }
-}
+    }
+
+
