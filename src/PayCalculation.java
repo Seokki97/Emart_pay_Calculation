@@ -45,5 +45,3 @@ class PayCalculation extends StartDayFunction{ //실제 급여계산을 이루�
         sun_result = sun*dayCount[6]*pay;
     }
     }
-
-

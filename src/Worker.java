@@ -68,7 +68,6 @@ class Worker extends PayCalculation{ //근무자들의 정보를 담아낸 클�
         selectKind();
         System.out.println( "이마트24 당산점" +month+ "월의 총 급여액은" +C1.totalPay+ "입니다." );
     }
-
 }
 
 
