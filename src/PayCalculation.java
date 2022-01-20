@@ -1,12 +1,12 @@
 class PayCalculation extends StartDayFunction{ //실제 급여계산을 이루어주는 클래스
     static int pay = 9160;
-    int mon=0, tue=0, wed=0,thur=0,fri=0,sat=0,sun=0;
     int mon_result=0, tue_result=0, wed_result=0,
             thur_result=0, fri_result=0, sat_result=0, sun_result=0 ;
     int monStart=0,tueStart=0,wedStart=0,
             thurStart=0,friStart=0,satStart=0,sunStart=0;
     int select;
     Option C1 = new Option();
+
     public void startDayConcept() { // 1일이 아닌 중간에 들어와서 근무를 시작한 경우의 메소드
         monStart = SEVEN[0] - dayCount[0];
         tueStart = SEVEN[1] - dayCount[1];
@@ -16,6 +16,7 @@ class PayCalculation extends StartDayFunction{ //실제 급여계산을 이루�
         satStart = SEVEN[5] - dayCount[5];
         sunStart = SEVEN[6] - dayCount[6];
     }
+
    public void cutInPayResult(){//중간에 끼는사람꺼의 메소드 종합
        endFind();
        startDayConcept();
@@ -25,11 +26,13 @@ class PayCalculation extends StartDayFunction{ //실제 급여계산을 이루�
         endFind();
         startDayConcept();
     }
+
     public void totalResult(){//토탈결과값 출력메소드 총합
         C1.discrimin();
         countInitialization();
         C1.totalPay();
     }
+
     public int selectKind(int mon,int tue,int wed,
                           int thur, int fri, int sat, int sun) {
         System.out.println("추가 옵션이 있습니까? 1 < 중간에 들어온 경우, 2< 중간에 나간 경우 3< 없다.");
