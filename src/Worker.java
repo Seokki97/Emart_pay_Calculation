@@ -17,30 +17,38 @@ class Worker extends PayCalculation{ //근무자들의 정보를 담아낸 클�
         countInitialization();
         C1.totalPay();
     }
-    public void selectKind() { //어떤 근무형태로 했는지 선택
+    public int selectKind(int mon,int tue,int wed,
+                           int thur, int fri, int sat, int sun) { //어떤 근무형태로 했는지 선택
         System.out.println("추가 옵션이 있습니까? 1 < 중간에 들어온 경우, 2< 중간에 나간 경우 3< 없다.");
         select = sc.nextInt();
-        System.out.println("현송의 근무시작일 혹은 나간일자을 입력해주세요");
+        System.out.println("근무시작일 혹은 나간일자을 입력해주세요");
         startDayInput = sc.nextInt();
         if (select == 1) {
             startDayPayResult();
-            C1.result = mon_result + tue_result + wed_result + thur_result;
+            C1.result = mon_result + tue_result + wed_result + thur_result
+            +fri_result + sat_result + sun_result;
+            System.out.println(mon_result);
+            System.out.println(pay);
+            System.out.println(mon);
+
         } if (select == 2) {
-            System.out.println("나간 일자를 입력해주세요");
             cutInPayResult();
-            C1.result = mon_result + tue_result + wed_result + thur_result;
+            C1.result = mon_result + tue_result + wed_result + thur_result
+                    +fri_result + sat_result + sun_result;
         } if (select == 3) {
             payCalculate();
-            C1.result = mon_result + tue_result + wed_result + thur_result;
+            C1.result = mon_result + tue_result + wed_result + thur_result
+                    +fri_result + sat_result + sun_result;
         }
         totalResult();
+        return C1.result;
     }
     public void Hyun_song() {
-        mon =4; tue =4; wed =3; thur =3;
+        //mon =4; tue =4; wed =3; thur =3;
         System.out.println("현송");
-        selectKind();
+        selectKind(4,4,3,3,0,0,0);
     }
-    public void Hee_jun() {
+  /*  public void Hee_jun() {
         mon = 5; tue = 5; sat = 10; sun = 8;
         System.out.println("희준");
         selectKind();
@@ -75,7 +83,7 @@ class Worker extends PayCalculation{ //근무자들의 정보를 담아낸 클�
         System.out.println("채은");
         selectKind();
         System.out.println( "이마트24 당산점" +month+ "월의 총 급여액은" +C1.totalPay+ "입니다." );
-    }
+    }*/
 }
 
 
