@@ -15,7 +15,7 @@ class PayCalculation extends StartDayFunction{ //실제 급여계산을 이루�
         satStart = SEVEN[5] - dayCount[5];
         sunStart = SEVEN[6] - dayCount[6];
     }
-    public void startDayPayCalculate() { // 그에 따른 요일별 pay결과
+   /* public void startDayPayCalculate() { // 그에 따른 요일별 pay결과
         mon_result = mon*monStart*pay;
         tue_result = tue*tueStart*pay;
         wed_result = wed*wedStart*pay;
@@ -23,8 +23,8 @@ class PayCalculation extends StartDayFunction{ //실제 급여계산을 이루�
         fri_result = fri*friStart*pay;
         sat_result = sat*satStart*pay;
         sun_result = sun*sunStart*pay;
-    }
-    public void payCalculate() { //1일부터 정상적으로 일한 경우의 메소드
+    }*/
+  /*  public void payCalculate() { //1일부터 정상적으로 일한 경우의 메소드
         mon_result = mon*SEVEN[0]*pay;
         tue_result = tue*SEVEN[1]*pay;
         wed_result = wed*SEVEN[2]*pay;
@@ -32,8 +32,8 @@ class PayCalculation extends StartDayFunction{ //실제 급여계산을 이루�
         fri_result = fri*SEVEN[4]*pay;
         sat_result = sat*SEVEN[5]*pay;
         sun_result = sun*SEVEN[6]*pay;
-    }
-    public void cutInPayCalculate() { //중간에 나간 사람, 즉 1일부터 ~x일까지의 급여량을 나타내는 메소드
+    }*/
+   /* public void cutInPayCalculate() { //중간에 나간 사람, 즉 1일부터 ~x일까지의 급여량을 나타내는 메소드
         mon_result = mon*dayCount[0]*pay;
         tue_result = tue*dayCount[1]*pay;
         wed_result = wed*dayCount[2]*pay;
@@ -41,5 +41,5 @@ class PayCalculation extends StartDayFunction{ //실제 급여계산을 이루�
         fri_result = fri*dayCount[4]*pay;
         sat_result = sat*dayCount[5]*pay;
         sun_result = sun*dayCount[6]*pay;
-    }
+    }*/
     }
