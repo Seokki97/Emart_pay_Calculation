@@ -1,6 +1,5 @@
 class Worker extends PayCalculation{ //근무자들의 정보를 담아낸 클래스
     public void Hyun_song() {
-        //mon =4; tue =4; wed =3; thur =3;
         System.out.println("현송");
         selectKind(4,4,3,3,0,0,0);
     }
