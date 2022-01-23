@@ -1,4 +1,3 @@
-
 public class StartDayFunction extends Calendar {  //중간에 들어오거나, 중간에 나가는 사람을 계산해주는 클래스
     Calendar C = new Calendar();
     int[] dayCount = {0,0,0,0,0,0,0};
