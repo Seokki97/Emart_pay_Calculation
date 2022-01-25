@@ -7,6 +7,11 @@ class PayCalculation extends StartDayFunction{ //실제 급여계산을 이루�
     int select;
     Option C1 = new Option();
 
+    public void inputTotal(){
+        input();
+        leapYear();
+        startFind();
+    }
     public void startDayConcept() { // 1일이 아닌 중간에 들어와서 근무를 시작한 경우의 메소드
         monStart = SEVEN[0] - dayCount[0];
         tueStart = SEVEN[1] - dayCount[1];
@@ -26,7 +31,6 @@ class PayCalculation extends StartDayFunction{ //실제 급여계산을 이루�
         endFind();
         startDayConcept();
     }
-
     public void totalResult(){//토탈결과값 출력메소드 총합
         C1.discrimin();
         countInitialization();

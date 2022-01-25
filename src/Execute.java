@@ -2,9 +2,7 @@
 public class Execute {
     public static void main(String[] args) {
         Worker c2 = new Worker();
-        c2.input();
-        c2.leapYear();
-        c2.startFind();
+        c2.c1.inputTotal();
         c2.Hyun_song();
         c2.Hee_jun();
         c2.Chae_young();
