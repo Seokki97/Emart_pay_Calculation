@@ -6,7 +6,7 @@ class Worker { //근무자들의 정보를 담아낸 클래스
     }
     public void Hee_jun() {
         System.out.println("희준");
-        c1.selectKind(5,5,0,0,0,9,8);
+        c1.selectKind(5,5,0,0,0,10,8);
     }
     public void Chae_young() {
         System.out.println("채영");
