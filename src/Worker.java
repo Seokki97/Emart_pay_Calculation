@@ -17,7 +17,7 @@ class Worker { //근무자들의 정보를 담아낸 클래스
         c1.selectKind(0,0,0,0,6,5,0);
           }
     public void Yu_won() {
-        System.out.println("주아");
+        System.out.println("현유");
         c1.selectKind(3,3,4,4,0,0,0);
     }
     public void Min_ji() {
