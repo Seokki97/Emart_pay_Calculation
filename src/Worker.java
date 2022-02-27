@@ -30,7 +30,7 @@ class Worker { //근무자들의 정보를 담아낸 클래스
     }
     public void Chae_eun() {
         System.out.println("채은");
-        c1.selectKind(0,0,7,4,0,0,0);
+        c1.selectKind(0,0,8,4,0,0,0);
     }
 }
 
