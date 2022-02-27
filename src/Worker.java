@@ -14,10 +14,10 @@ class Worker { //근무자들의 정보를 담아낸 클래스
     }
     public void Jae_lim() {
         System.out.println("재림");
-        c1.selectKind(0,0,0,0,6,5,0);
+        c1.selectKind(0,0,0,0,10,4,0);
     }
-    public void Yu_won() {
-        System.out.println("여원");
+    public void ju_a() {
+        System.out.println("주아");
         c1.selectKind(3,3,4,4,0,0,0);
     }
     public void Min_ji() {
@@ -26,7 +26,7 @@ class Worker { //근무자들의 정보를 담아낸 클래스
     }
     public void Se_bin() {
         System.out.println("세빈");
-        c1.selectKind(0,0,0,4,4,4,0);
+        c1.selectKind(0,0,0,4,0, 5,0);
     }
     public void Chae_eun() {
         System.out.println("채은");
