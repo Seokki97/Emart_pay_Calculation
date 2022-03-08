@@ -1,5 +1,12 @@
 class Worker { //근무자들의 정보를 담아낸 클래스
     PayCalculation c1 = new PayCalculation();
+
+    public String workerName;
+
+    public void setWorkerName(String name){
+        workerName = name;
+    }
+
     public void Hyun_song() {
         System.out.println("현송");
         c1.selectKind(4,4,3,3,0,0,0);
