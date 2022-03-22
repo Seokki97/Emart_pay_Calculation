@@ -25,6 +25,10 @@ class PayCalculation extends StartDayFunction{ //실제 급여계산을 이루�
         sunStart = SEVEN[6] - dayCount[6];
     }
 
+    public void totalPay(){
+        System.out.println(this.name+"의 총 급여는" +C1.result+"입니다.");
+    }
+
     public void startDayPayResult(){//시작날짜반영 메소드 총합
 
         endFind();
@@ -33,7 +37,7 @@ class PayCalculation extends StartDayFunction{ //실제 급여계산을 이루�
     public void totalResult(){//토탈결과값 출력메소드 총합
         C1.discrimin();
         countInitialization();
-        C1.totalPay();
+        //C1.totalPay();
     }
 
 
@@ -57,6 +61,7 @@ class PayCalculation extends StartDayFunction{ //실제 급여계산을 이루�
                 +fri_result + sat_result + sun_result;
 
         //totalResult();
+        totalPay();
 
     }
     }
