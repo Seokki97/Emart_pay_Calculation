@@ -6,10 +6,11 @@ class PayCalculation extends StartDayFunction{ //실제 급여계산을 이루�
             thurStart,friStart,satStart,sunStart;
     int mon,tue,wed,thur,fri,sat,sun;
     int startDayInput;
+    String name;
     Option C1 = new Option();
 
     public void inputTotal(){
-        input(2022, 1, "토");
+         input(2022, 1, "토");
         leapYear();
         startFind();
     }
@@ -36,8 +37,9 @@ class PayCalculation extends StartDayFunction{ //실제 급여계산을 이루�
     }
 
 
-    public PayCalculation(int mon,int tue,int wed,
+    public PayCalculation(String name,int mon,int tue,int wed,
                           int thur, int fri, int sat, int sun, int startDayInput) {
+        this.name = name;
         this.mon = mon; this.tue = tue; this.wed = wed; this.thur = thur;
         this.fri = fri; this.sat = sat; this.sun = sun; this.startDayInput = startDayInput;
 
@@ -54,10 +56,7 @@ class PayCalculation extends StartDayFunction{ //실제 급여계산을 이루�
         C1.result = mon_result + tue_result + wed_result + thur_result
                 +fri_result + sat_result + sun_result;
 
-        totalResult();
+        //totalResult();
 
-        System.out.println(dayCount[1]);
-        System.out.println(monStart);
-        System.out.println(SEVEN[1]);
     }
     }

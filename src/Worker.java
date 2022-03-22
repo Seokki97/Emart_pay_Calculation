@@ -1,5 +1,6 @@
 class Worker { //근무자들의 정보를 담아낸 클래스
-    PayCalculation HyunSong = new PayCalculation(4,4,3,3,0,0,0,1);
+
+    PayCalculation HyunSong = new PayCalculation("현송", 4,4,3,3,0,0,0,1);
 
 
 

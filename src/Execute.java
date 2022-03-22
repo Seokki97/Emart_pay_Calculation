@@ -2,6 +2,7 @@
 public class Execute {
     public static void main(String[] args) {
         Worker c2 = new Worker();
+
         c2.HyunSong.result();
         /*c2.c1.inputTotal();
         c2.Hyun_song();
