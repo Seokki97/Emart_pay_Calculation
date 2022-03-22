@@ -7,7 +7,7 @@ class PayCalculation extends StartDayFunction{ //실제 급여계산을 이루�
     int mon,tue,wed,thur,fri,sat,sun;
     int startDayInput;
     String name;
-    Option C1 = new Option();
+    int result=0;
 
     public void inputTotal(){
          input(2022, 1, "토");
@@ -26,7 +26,7 @@ class PayCalculation extends StartDayFunction{ //실제 급여계산을 이루�
     }
 
     public void totalPay(){
-        System.out.println(this.name+"의 총 급여는" +C1.result+"입니다.");
+        System.out.println(this.name+"의 총 급여는" +result+"입니다.");
     }
 
     public void startDayPayResult(){//시작날짜반영 메소드 총합
@@ -34,12 +34,6 @@ class PayCalculation extends StartDayFunction{ //실제 급여계산을 이루�
         endFind();
         startDayConcept();
     }
-    public void totalResult(){//토탈결과값 출력메소드 총합
-        C1.discrimin();
-        countInitialization();
-        //C1.totalPay();
-    }
-
 
     public PayCalculation(String name,int mon,int tue,int wed,
                           int thur, int fri, int sat, int sun, int startDayInput) {
@@ -57,7 +51,7 @@ class PayCalculation extends StartDayFunction{ //실제 급여계산을 이루�
         fri_result = this.fri*friStart*pay; sat_result = this.sat*satStart*pay;
         sun_result = this.sun*sunStart*pay;
 
-        C1.result = mon_result + tue_result + wed_result + thur_result
+        result = mon_result + tue_result + wed_result + thur_result
                 +fri_result + sat_result + sun_result;
 
         //totalResult();

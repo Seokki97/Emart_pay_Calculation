@@ -126,11 +126,5 @@ public class StartDayFunction extends Calendar {  //중간에 들어오거나, �
             endSun();
         }
     }
-
-    public void countInitialization() { //dayCount를 초기화해줘야 하기 때문에 만든 메소드
-        for (int i = 0; i < 7; i++) {
-            dayCount[i] = 0;
-        }
-    }
 }
 
