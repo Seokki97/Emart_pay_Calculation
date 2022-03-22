@@ -20,7 +20,7 @@ class Option { //추가적인 기능(추가, 감소근무)을 나타내는 클�
     public void discrimin() { //총 결과값들을 출력해주는 메소드
             System.out.println("급여는" +result+"입니다.");
     }
- public void totalPay(){
-        totalPay +=result;
-}
+ /*public void totalPay(){
+     System.out.println("급여는" +result+"입니다.");
+}*/
 }
