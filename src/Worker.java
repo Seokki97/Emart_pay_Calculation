@@ -1,13 +1,11 @@
 class Worker { //근무자들의 정보를 담아낸 클래스
-    PayCalculation c1 = new PayCalculation();
+    PayCalculation HyunSong = new PayCalculation(4,4,3,3,0,0,0,1);
 
-    public String workerName;
 
-    public void setWorkerName(String name){
-        workerName = name;
-    }
 
-    public void Hyun_song() {
+
+
+   /* public void Hyun_song() {
         System.out.println("현송");
         c1.selectKind(4,4,3,3,0,0,0);
     }
@@ -38,7 +36,7 @@ class Worker { //근무자들의 정보를 담아낸 클래스
     public void Chae_eun() {
         System.out.println("채은");
         c1.selectKind(0,0,8,4,0,0,0);
-    }
+    }*/
 }
 
 

@@ -18,19 +18,7 @@ class Option { //추가적인 기능(추가, 감소근무)을 나타내는 클�
         minusPay = minusTime*pay;
     }
     public void discrimin() { //총 결과값들을 출력해주는 메소드
-        System.out.println("추가근무가 있으면 '추가', 근무 감소가 있다면 '감소', 없다면 0을 입력해주세요");
-        plusMinus = sc.next();
-        if(plusMinus.equals("추가")) {
-            plusPay();
-            System.out.println("급여는" +(result +plusPay) +"입니다.");
-        }
-        else if(plusMinus.equals("감소")) {
-            minusPay();
-            System.out.println("급여는" +(result -minusPay) +"입니다.");
-        }
-        else if(plusMinus.equals("0")) {
             System.out.println("급여는" +result+"입니다.");
-        }
     }
  public void totalPay(){
         totalPay +=result;
