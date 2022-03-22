@@ -104,25 +104,25 @@ public class StartDayFunction extends Calendar {  //중간에 들어오거나, �
         for (int i = 0; i < dayCount.length; i++) {
             dayCount[i] += share;
         }
-        if (first_day.equals("월")) {
+        if (this.firstDay.equals("월")) {
             endMon();
         }
-        if (first_day.equals("화")) {
+        if (this.firstDay.equals("화")) {
             endTue();
         }
-        if (first_day.equals("수")) {
+        if (this.firstDay.equals("수")) {
             endWed();
         }
-        if (first_day.equals("목")) {
+        if (this.firstDay.equals("목")) {
             endThur();
         }
-        if (first_day.equals("금")) {
+        if (this.firstDay.equals("금")) {
             endFri();
         }
-        if (first_day.equals("토")) {
+        if (this.firstDay.equals("토")) {
             endSat();
         }
-        if (first_day.equals("일")) {
+        if (this.firstDay.equals("일")) {
             endSun();
         }
     }

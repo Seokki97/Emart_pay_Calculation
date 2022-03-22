@@ -4,14 +4,11 @@ public class Calendar { //입력한 달에 월요일~일요일이 각 몇번 있
     int[] days = new int[12];
     int year, month, monthDay;
     int[] SEVEN = new int[7];
-    String first_day = "";
-    public void input() { //년 월, 시작요일을 입력받는 메소드
-        System.out.println("년을 입력하세요.");
-        year = sc.nextInt();
-        System.out.println("월을 입력하세요");
-        month = sc.nextInt();
-        System.out.println("시작 요일을 입력하세요");
-        first_day = sc.next();
+    String firstDay ;
+    public void input(int year, int month, String firstDay) { //년 월, 시작요일을 입력받는 메소드
+        this.year = year;
+        this.month = month;
+        this.firstDay= firstDay;
     }
 
     public void leapYear() { //윤년인지 아닌지 판별해주는 메소드
@@ -118,19 +115,19 @@ public class Calendar { //입력한 달에 월요일~일요일이 각 몇번 있
 
     public void startFind() { //input에 요일 입력을 하면 그에 따른 메소드가 실행
         monthDay = days[month-1];
-        if(first_day.equals("월"))	{
+        if(this.firstDay.equals("월"))	{
             startMon();
-        }if(first_day.equals("화"))	{
+        }if(this.firstDay.equals("화"))	{
             startTue();
-        }if(first_day.equals("수"))	{
+        }if(this.firstDay.equals("수"))	{
             startWed();
-        }if(first_day.equals("목"))	{
+        }if(this.firstDay.equals("목"))	{
             startThur();
-        }if(first_day.equals("금"))	{
+        }if(this.firstDay.equals("금"))	{
             startFri();
-        }if(first_day.equals("토"))	{
+        }if(this.firstDay.equals("토"))	{
             startSat();
-        }if(first_day.equals("일"))	{
+        }if(this.firstDay.equals("일"))	{
             startSun();
         }
 
