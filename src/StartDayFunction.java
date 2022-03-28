@@ -3,19 +3,19 @@ public class StartDayFunction extends Calendar {  //중간에 들어오거나, �
     int share;
     int remainder;
 
-    public void endMon() { // 1일부터 input값까지의 월요일 갯수를 카운팅
+    public void removeMonCount() { // 1일부터 input값까지의 월요일 갯수를 카운팅
         for (int i = 0; i < remainder; i++) {
             dayCount[i] += 1;
         }
     }
 
-    public void endTue() {// 1일부터 input값까지의 화요일 갯수를 카운팅
+    public void removeTueCount() {// 1일부터 input값까지의 화요일 갯수를 카운팅
         for (int i = 1; i < remainder + 1; i++) {
             dayCount[i] += 1;
         }
     }
 
-    public void endWed() {// 1일부터 input값까지의 수요일 갯수를 카운팅
+    public void removeWedCount() {// 1일부터 input값까지의 수요일 갯수를 카운팅
         for (int i = 2; i < 7; i++) {
             if (remainder == i) {
                 for (int j = 2; j < i + 1; j++) {
@@ -25,7 +25,7 @@ public class StartDayFunction extends Calendar {  //중간에 들어오거나, �
         }
     }
 
-    public void endThur() {// 1일부터 input값까지의 목요일 갯수를 카운팅
+    public void removeThurCount() {// 1일부터 input값까지의 목요일 갯수를 카운팅
         if (remainder == 6) {
             for (int i = 3; i < dayCount.length; i++) {
                 dayCount[i] += 1;
@@ -41,7 +41,7 @@ public class StartDayFunction extends Calendar {  //중간에 들어오거나, �
         }
     }
 
-    public void endFri() {// 1일부터 input값까지의 금요일 갯수를 카운팅
+    public void removeFriCount() {// 1일부터 input값까지의 금요일 갯수를 카운팅
         if (remainder == 5) {
             for (int i = 4; i < dayCount.length; i++) {
                 dayCount[i] += 1;
@@ -64,7 +64,7 @@ public class StartDayFunction extends Calendar {  //중간에 들어오거나, �
         }
     }
 
-    public void endSat() {// 1일부터 input값까지의 토요일 갯수를 카운팅
+    public void removeSatCount() {// 1일부터 input값까지의 토요일 갯수를 카운팅
         if (remainder == 2) {
             dayCount[5] += 1;
         }
@@ -85,7 +85,7 @@ public class StartDayFunction extends Calendar {  //중간에 들어오거나, �
         }
     }
 
-    public void endSun() {// 1일부터 input값까지의 일요일 갯수를 카운팅
+    public void removeSunCount() {// 1일부터 input값까지의 일요일 갯수를 카운팅
         for (int j = 2; j < 7; j++) {
             if (remainder == j) {
                 dayCount[6] += 1;
@@ -101,25 +101,25 @@ public class StartDayFunction extends Calendar {  //중간에 들어오거나, �
             dayCount[i] += share;
         }
         if (this.firstDay.equals("월")) {
-            endMon();
+            removeMonCount();
         }
         if (this.firstDay.equals("화")) {
-            endTue();
+            removeTueCount();
         }
         if (this.firstDay.equals("수")) {
-            endWed();
+            removeWedCount();
         }
         if (this.firstDay.equals("목")) {
-            endThur();
+            removeThurCount();
         }
         if (this.firstDay.equals("금")) {
-            endFri();
+            removeFriCount();
         }
         if (this.firstDay.equals("토")) {
-            endSat();
+            removeSatCount();
         }
         if (this.firstDay.equals("일")) {
-            endSun();
+            removeSunCount();
         }
     }
 }

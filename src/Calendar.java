@@ -22,7 +22,7 @@ public class Calendar { //입력한 달에 월요일~일요일이 각 몇번 있
         }
     }
 
-    public void startMon() { //input값에 따라 해당 월의 월요일의 개수를 counting
+    public void totalMonCount() { //input값에 따라 해당 월의 월요일의 개수를 counting
         if(monthDay == 31) {
             for(int i=0; i<3; i++) {
                 dayWeek[i] +=1;
@@ -35,7 +35,7 @@ public class Calendar { //입력한 달에 월요일~일요일이 각 몇번 있
         }
     }
 
-    public void startTue() {//input값에 따라 해당 월의 화요일의 개수를 counting
+    public void totalTueCount() {//input값에 따라 해당 월의 화요일의 개수를 counting
         if(monthDay == 31) {
             for(int i = 1; i < 4; i++) {
                 dayWeek[i] +=1;
@@ -48,7 +48,7 @@ public class Calendar { //입력한 달에 월요일~일요일이 각 몇번 있
         }
     }
 
-    public void startWed() {//input값에 따라 해당 월의 수요일의 개수를 counting
+    public void totalWedCount() {//input값에 따라 해당 월의 수요일의 개수를 counting
         if(monthDay == 31) {
             for(int i = 2; i<5; i++) {
                 dayWeek[i] +=1;
@@ -61,7 +61,7 @@ public class Calendar { //입력한 달에 월요일~일요일이 각 몇번 있
         }
     }
 
-    public void startThur() {//input값에 따라 해당 월의 목요일의 개수를 counting
+    public void totalThurCount() {//input값에 따라 해당 월의 목요일의 개수를 counting
         if(monthDay==31) {
             for(int i=3; i<6; i++) {
                 dayWeek[i] +=1;
@@ -74,7 +74,7 @@ public class Calendar { //입력한 달에 월요일~일요일이 각 몇번 있
         }
     }
 
-    public void startFri() {//input값에 따라 해당 월의 금요일의 개수를 counting
+    public void totalFriCount() {//input값에 따라 해당 월의 금요일의 개수를 counting
         if(monthDay==31) {
             for(int i=4; i<7; i++) {
                 dayWeek[i] +=1;
@@ -87,7 +87,7 @@ public class Calendar { //입력한 달에 월요일~일요일이 각 몇번 있
         }
     }
 
-    public void startSat() {//input값에 따라 해당 월의 토요일의 개수를 counting
+    public void totalSatCount() {//input값에 따라 해당 월의 토요일의 개수를 counting
         if(monthDay==31) {
             for(int i=5; i<7; i++) {
                 dayWeek[i]+=1;
@@ -101,7 +101,7 @@ public class Calendar { //입력한 달에 월요일~일요일이 각 몇번 있
         }
     }
 
-    public void startSun() {//input값에 따라 해당 월의 일요일의 개수를 counting
+    public void totalSunCount() {//input값에 따라 해당 월의 일요일의 개수를 counting
         if(monthDay==31) {
             dayWeek[6] +=1;
             dayWeek[0] +=1;
@@ -116,19 +116,19 @@ public class Calendar { //입력한 달에 월요일~일요일이 각 몇번 있
     public void startFind() { //input에 요일 입력을 하면 그에 따른 메소드가 실행
         monthDay = days[month-1];
         if(this.firstDay.equals("월"))	{
-            startMon();
+            totalMonCount();
         }if(this.firstDay.equals("화"))	{
-            startTue();
+            totalTueCount();
         }if(this.firstDay.equals("수"))	{
-            startWed();
+            totalWedCount();
         }if(this.firstDay.equals("목"))	{
-            startThur();
+            totalThurCount();
         }if(this.firstDay.equals("금"))	{
-            startFri();
+            totalFriCount();
         }if(this.firstDay.equals("토"))	{
-            startSat();
+            totalSatCount();
         }if(this.firstDay.equals("일"))	{
-            startSun();
+            totalSunCount();
         }
     }
 }
