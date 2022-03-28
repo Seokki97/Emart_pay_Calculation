@@ -8,7 +8,7 @@ public class Execute {
         c2.jaeLim.result();
         c2.minJi.result();
         c2.siYoung.result();
-        c2.minJi.result();
+        c2.jiMin.result();
         c2.jungWon.result();
     }
 }
