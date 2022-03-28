@@ -130,7 +130,5 @@ public class Calendar { //입력한 달에 월요일~일요일이 각 몇번 있
         }if(this.firstDay.equals("일"))	{
             startSun();
         }
-
-
     }
 }
