@@ -72,7 +72,6 @@ public class StartDayFunction extends Calendar {  //중간에 들어오거나, �
         if (remainder == 3) {
             for (int i = 5; i < dayCount.length; i++) {
                 dayCount[i] += 1;
-
             }
         }
         for (int i = 4; i < 7; i++) {
@@ -99,8 +98,6 @@ public class StartDayFunction extends Calendar {  //중간에 들어오거나, �
     }
 
     public void endFind() { // input받은 요일과 같은 요일의 메소드를 불러옴
-        share = startDayInput / 7;
-        remainder = (startDayInput % 7);
         for (int i = 0; i < dayCount.length; i++) {
             dayCount[i] += share;
         }
