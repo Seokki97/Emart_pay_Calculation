@@ -1,9 +1,11 @@
 class PayCalculation extends StartDayFunction{ //실제 급여계산을 이루어주는 클래스
-    static int pay = 9160;
+    private int pay = 9160;
     int monResult=0, tueResult=0, wedResult=0,
             thurResult=0, friResult=0, satResult=0, sunResult=0 ;
+
     int monStart,tueStart,wedStart,
             thurStart,friStart,satStart,sunStart;
+
     int mon,tue,wed,thur,fri,sat,sun;
     int startDayInput;
     String name;
