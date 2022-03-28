@@ -27,7 +27,6 @@ class PayCalculation extends StartDayFunction{ //실제 급여계산을 이루�
         friStart = dayWeek[4] - dayCount[4];
         satStart = dayWeek[5] - dayCount[5];
         sunStart = dayWeek[6] - dayCount[6];
-
     }
 
     public void showTotalPay(){
