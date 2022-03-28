@@ -42,6 +42,7 @@ class PayCalculation extends StartDayFunction{ //실제 급여계산을 이루�
         this.mon = mon; this.tue = tue; this.wed = wed; this.thur = thur;
         this.fri = fri; this.sat = sat; this.sun = sun; this.startDayInput = startDayInput;
     }
+
     public void result(){
         startDayConcept();
 
