@@ -2,7 +2,7 @@ public class StartDayFunction extends Calendar {  //중간에 들어오거나, �
     int[] dayCount = {0, 0, 0, 0, 0, 0, 0};
     int share;
     int remainder;
-    public int startDayInput = 0;
+    int startDayInput = 0;
 
     public void endMon() { // 1일부터 input값까지의 월요일 갯수를 카운팅
         for (int i = 0; i < remainder; i++) {

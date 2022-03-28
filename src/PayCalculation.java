@@ -10,12 +10,13 @@ class PayCalculation extends StartDayFunction{ //실제 급여계산을 이루�
     int result=0;
 
     public void inputTotal(){
-         input(2022, 1, "토");
+        input(2022, 1, "토");
         leapYear();
-        startFind();
+        endFind();
     }
+
     public void startDayConcept() {
-      inputTotal();  // 1일이 아닌 중간에 들어와서 근무를 시작한 경우의 메소드
+      inputTotal();
         monStart = SEVEN[0] - dayCount[0];
         tueStart = SEVEN[1] - dayCount[1];
         wedStart = SEVEN[2] - dayCount[2];
@@ -29,7 +30,7 @@ class PayCalculation extends StartDayFunction{ //실제 급여계산을 이루�
         System.out.println(this.name+"의 총 급여는" +result+"입니다.");
     }
 
-    public void startDayPayResult(){//시작날짜반영 메소드 총합
+    public void startDayPayResult(){
 
         endFind();
         startDayConcept();
@@ -54,7 +55,7 @@ class PayCalculation extends StartDayFunction{ //실제 급여계산을 이루�
         result = mon_result + tue_result + wed_result + thur_result
                 +fri_result + sat_result + sun_result;
 
-        //totalResult();
+
         totalPay();
 
     }
