@@ -10,5 +10,6 @@ public class Execute {
         c2.siYoung.result();
         c2.jiMin.result();
         c2.jungWon.result();
+        c2.seBin.result();
     }
 }
