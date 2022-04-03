@@ -14,7 +14,7 @@ class PayCalculation extends StartDayFunction{ //실제 급여계산을 이루�
     public void inputTotal(){
         share = startDayInput / 7;
         remainder = (startDayInput % 7);
-        input(2022, 1, "토");
+        input(2022, 3, "화");
         setLeapYear();
         startFind();
         endFind();

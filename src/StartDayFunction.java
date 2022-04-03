@@ -10,7 +10,7 @@ public class StartDayFunction extends Calendar {  //중간에 들어오거나, �
     }
 
     public void removeTueCount() {// 1일부터 input값까지의 화요일 갯수를 카운팅
-        for (int i = 1; i < remainder + 1; i++) {
+        for (int i = 1; i < remainder ; i++) {
             dayCount[i] += 1;
         }
     }
