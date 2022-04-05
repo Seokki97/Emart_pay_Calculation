@@ -32,7 +32,14 @@ class PayCalculation extends StartDayFunction{ //실제 급여계산을 이루�
     }
 
     public void showTotalPay(){
-        System.out.println(this.name+"의 총 급여는" +result+"입니다.");
+        for(int i = 0 ; i < dayCount.length; i++){
+            System.out.print(dayWeek[i]);
+        }
+        for(int j = 0 ; j < dayCount.length; j++){
+            System.out.print(dayCount[j]);
+        }
+
+        //System.out.println(this.name+"의 총 급여는" +result+"입니다.");
     }
     public void ChangePay(){
     if(plusPay>0){
