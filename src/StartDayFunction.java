@@ -97,13 +97,17 @@ public class StartDayFunction extends Calendar {  //중간에 들어오거나, �
     }
 
     public void endFind() { // input받은 요일과 같은 요일의 메소드를 불러옴
-        for (int i = 1; i < dayCount.length; i++) {
+        /*for (int i = 1; i < dayCount.length; i++) {
             dayCount[i] += share;
-        }
+        }*/
         if (this.firstDay.equals("월")) {
+
             removeMonCount();
         }
         if (this.firstDay.equals("화")) {
+            for (int i = 1; i < dayCount.length; i++) {
+                dayCount[i] += share;
+            }
             removeTueCount();
         }
         if (this.firstDay.equals("수")) {
