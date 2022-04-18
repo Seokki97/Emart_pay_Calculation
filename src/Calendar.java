@@ -1,9 +1,9 @@
 import java.util.Scanner;
 public class Calendar { //입력한 달에 월요일~일요일이 각 몇번 있는지를 나타내는 클래스
-    int[] days = new int[12];
-    int year, month, monthDay;
-    int[] dayWeek = new int[7];
-    String firstDay ;
+    protected int[] days = new int[12];
+    protected int year, month, monthDay;
+    protected int[] dayWeek = new int[7];
+    protected String firstDay ;
 
     public void input(int year, int month, String firstDay) { //년 월, 시작요일을 입력받는 메소드
         this.year = year;
