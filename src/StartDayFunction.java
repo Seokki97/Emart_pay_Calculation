@@ -3,7 +3,8 @@ public class StartDayFunction extends Calendar {  //중간에 들어오거나, �
     protected int share;
     protected int remainder;
 
-    public void removeMonCount() { // 1일부터 input값까지의 월요일 갯수를 카운팅
+    @Override
+    public void totalMonCount() { // 1일부터 input값까지의 월요일 갯수를 카운팅
         for (int i = 0; i < remainder; i++) {
             dayCount[i] += 1;
         }
@@ -97,12 +98,8 @@ public class StartDayFunction extends Calendar {  //중간에 들어오거나, �
     }
 
     public void endFind() { // input받은 요일과 같은 요일의 메소드를 불러옴
-        /*for (int i = 1; i < dayCount.length; i++) {
-            dayCount[i] += share;
-        }*/
         if (this.firstDay.equals("월")) {
-
-            removeMonCount();
+            totalMonCount();
         }
         if (this.firstDay.equals("화")) {
             for (int i = 1; i < dayCount.length; i++) {
