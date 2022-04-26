@@ -1,10 +1,7 @@
 public class StartDayFunction extends Calendar {  //중간에 들어오거나, 중간에 나가는 사람을 계산해주는 클래스
-    protected int[] dayCount = {0, 0, 0, 0, 0, 0, 0};
-    protected int share;
-    protected int remainder;
 
-    @Override
-    public void totalMonCount() { // 1일부터 input값까지의 월요일 갯수를 카운팅
+
+    public void removeMonCount() { // 1일부터 input값까지의 월요일 갯수를 카운팅
         for (int i = 0; i < remainder; i++) {
             dayCount[i] += 1;
         }
@@ -30,7 +27,7 @@ public class StartDayFunction extends Calendar {  //중간에 들어오거나, �
         if (remainder == 6) {
             for (int i = 3; i < dayCount.length; i++) {
                 dayCount[i] += 1;
-            } // 3 4 5 6  + 0
+            }
             dayCount[0] += 1;
         }
         for (int i = 2; i < 6; i++) {
@@ -99,7 +96,10 @@ public class StartDayFunction extends Calendar {  //중간에 들어오거나, �
 
     public void endFind() { // input받은 요일과 같은 요일의 메소드를 불러옴
         if (this.firstDay.equals("월")) {
-            totalMonCount();
+            for (int i = 0; i < dayCount.length; i++) {
+                dayCount[i] += share;
+            }
+            removeMonCount();
         }
         if (this.firstDay.equals("화")) {
             for (int i = 1; i < dayCount.length; i++) {
@@ -108,18 +108,33 @@ public class StartDayFunction extends Calendar {  //중간에 들어오거나, �
             removeTueCount();
         }
         if (this.firstDay.equals("수")) {
+            for (int i = 2; i < dayCount.length; i++) {
+                dayCount[i] += share;
+            }
             removeWedCount();
         }
         if (this.firstDay.equals("목")) {
+            for (int i = 3; i < dayCount.length; i++) {
+                dayCount[i] += share;
+            }
             removeThurCount();
         }
         if (this.firstDay.equals("금")) {
+            for (int i = 4; i < dayCount.length; i++) {
+                dayCount[i] += share;
+            }
             removeFriCount();
         }
         if (this.firstDay.equals("토")) {
+            for (int i = 5; i < dayCount.length; i++) {
+                dayCount[i] += share;
+            }
             removeSatCount();
         }
         if (this.firstDay.equals("일")) {
+            for (int i = 6; i < dayCount.length; i++) {
+                dayCount[i] += share;
+            }
             removeSunCount();
         }
     }
