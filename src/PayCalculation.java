@@ -12,9 +12,10 @@ class PayCalculation extends StartDayFunction{ //실제 급여계산을 이루�
     int result=0;
     int plusPay; int minusPay;
 
-    public void inputTotal(){
+    CalendarCalculator calcCal = new CalendarCalculator();
+  /*  public void inputTotal(){
         share = startDayInput / 7;
-        remainder = (startDayInput % 7)-1;
+        remainder = (startDayInput % 7) -1;
         input(2022, 8, "월");
         setLeapYear();
         startFind();
@@ -22,7 +23,9 @@ class PayCalculation extends StartDayFunction{ //실제 급여계산을 이루�
     }
 
     public void startDayConcept() {
+
       inputTotal();
+
      if(startDayInput == 1){
           monStart = dayWeek[0];
           tueStart = dayWeek[1];
@@ -42,7 +45,7 @@ class PayCalculation extends StartDayFunction{ //실제 급여계산을 이루�
         sunStart = dayWeek[6] - dayCount[6];
     }
 
-    }
+    }*/
 
     public void showTotalPay(){
         for(int i = 0 ; i < dayCount.length; i++){
@@ -71,8 +74,8 @@ class PayCalculation extends StartDayFunction{ //실제 급여계산을 이루�
         this.plusPay = plusPay; this.minusPay = minusPay;
     }
 
-    public void result(){
-        startDayConcept();
+    public void showPayResult(){
+        calcCal.startDayConcept();
 
         monResult = this.mon*monStart*pay; tueResult = this.tue*tueStart*pay;
         wedResult = this.wed*wedStart*pay; thurResult = this.thur*thurStart*pay;

@@ -3,13 +3,13 @@ public class Execute {
     public static void main(String[] args) {
         Worker c2 = new Worker();
 
-        c2.hyunSong.result();
-       /* c2.heeJun.result();
-        c2.jaeLim.result();
-        c2.minJi.result();
-        c2.siYoung.result();
-        c2.jiMin.result();
-        c2.jungWon.result();
-        c2.seBin.result();*/
+        c2.hyunSong.showPayResult();
+       /* c2.heeJun.showPayResult();
+        c2.jaeLim.showPayResult();
+        c2.minJi.showPayResult();
+        c2.siYoung.showPayResult();
+        c2.jiMin.showPayResult();
+        c2.jungWon.showPayResult();
+        c2.seBin.showPayResult();*/
     }
 }
