@@ -5,26 +5,24 @@ class PayCalculation extends StartDayFunction{ //실제 급여계산을 이루�
 
     int monStart,tueStart,wedStart,
             thurStart,friStart,satStart,sunStart;
-
-    int mon,tue,wed,thur,fri,sat,sun;
-    public static int startDayInput;
     String name;
+    int startDayInput;
+    int mon,tue,wed,thur,fri,sat,sun;
     int result=0;
     int plusPay; int minusPay;
 
     public PayCalculation(String name,int mon,int tue,int wed,
-                          int thur, int fri, int sat, int sun, int startDayInput, int plusPay, int minusPay) {
-        this.name = name;
+                          int thur, int fri, int sat, int sun,int startDayInput, int plusPay, int minusPay) {
         this.mon = mon; this.tue = tue; this.wed = wed; this.thur = thur;
-        this.fri = fri; this.sat = sat; this.sun = sun; this.startDayInput = startDayInput;
+        this.fri = fri; this.sat = sat; this.sun = sun;
         this.plusPay = plusPay; this.minusPay = minusPay;
+        this.name = name; this.startDayInput =startDayInput;
     }
 
-    CalendarCalculator calcCal = new CalendarCalculator();
-  /*  public void inputTotal(){
+    public void inputTotal(){
         share = startDayInput / 7;
         remainder = (startDayInput % 7) -1;
-        input(2022, 8, "월");
+        input(2022, 4, "금");
         setLeapYear();
         startFind();
         endFind();
@@ -53,17 +51,16 @@ class PayCalculation extends StartDayFunction{ //실제 급여계산을 이루�
         sunStart = dayWeek[6] - dayCount[6];
     }
 
-    }*/
+    }
 
     public void showTotalPay(){
-        for(int i = 0 ; i < dayCount.length; i++){
+        /*for(int i = 0 ; i < dayCount.length; i++){
             System.out.print(calcCal.dayWeek[i]);
         }
         for(int j = 0 ; j < dayCount.length; j++){
             System.out.print(calcCal.dayCount[j]);
-        }
-        System.out.println(calcCal.remainder);
-        System.out.println(startDayInput);
+        }*/
+      //  System.out.println(startDayInput);
         System.out.println(this.name+"의 총 급여는" +result+"입니다.");
     }
 
@@ -77,7 +74,7 @@ class PayCalculation extends StartDayFunction{ //실제 급여계산을 이루�
     }
 
     public void showPayResult(){
-        calcCal.startDayConcept();
+        startDayConcept();
 
         monResult = this.mon*monStart*pay; tueResult = this.tue*tueStart*pay;
         wedResult = this.wed*wedStart*pay; thurResult = this.thur*thurStart*pay;
