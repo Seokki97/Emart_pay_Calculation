@@ -9,7 +9,6 @@ public class Calendar { //입력한 달에 월요일~일요일이 각 몇번 있
     protected int share;
     protected int remainder;
 
-
     public void input(int year, int month, String firstDay) { //년 월, 시작요일을 입력받는 메소드
         this.year = year;
         this.month = month;

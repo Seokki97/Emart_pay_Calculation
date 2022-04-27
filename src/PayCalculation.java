@@ -7,12 +7,11 @@ class PayCalculation extends StartDayFunction{ //실제 급여계산을 이루�
             thurStart,friStart,satStart,sunStart;
 
     int mon,tue,wed,thur,fri,sat,sun;
-    int startDayInput;
+    public static int startDayInput;
     String name;
     int result=0;
     int plusPay; int minusPay;
 
-    public PayCalculation(){};
     public PayCalculation(String name,int mon,int tue,int wed,
                           int thur, int fri, int sat, int sun, int startDayInput, int plusPay, int minusPay) {
         this.name = name;
@@ -64,9 +63,10 @@ class PayCalculation extends StartDayFunction{ //실제 급여계산을 이루�
             System.out.print(calcCal.dayCount[j]);
         }
         System.out.println(calcCal.remainder);
-        System.out.println(calcCal.startDayInput);
+        System.out.println(startDayInput);
         System.out.println(this.name+"의 총 급여는" +result+"입니다.");
     }
+
     public void ChangePay(){
     if(plusPay>0){
         result += 9160*plusPay;
