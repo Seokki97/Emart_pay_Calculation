@@ -12,6 +12,15 @@ class PayCalculation extends StartDayFunction{ //실제 급여계산을 이루�
     int result=0;
     int plusPay; int minusPay;
 
+    public PayCalculation(){};
+    public PayCalculation(String name,int mon,int tue,int wed,
+                          int thur, int fri, int sat, int sun, int startDayInput, int plusPay, int minusPay) {
+        this.name = name;
+        this.mon = mon; this.tue = tue; this.wed = wed; this.thur = thur;
+        this.fri = fri; this.sat = sat; this.sun = sun; this.startDayInput = startDayInput;
+        this.plusPay = plusPay; this.minusPay = minusPay;
+    }
+
     CalendarCalculator calcCal = new CalendarCalculator();
   /*  public void inputTotal(){
         share = startDayInput / 7;
@@ -49,12 +58,13 @@ class PayCalculation extends StartDayFunction{ //실제 급여계산을 이루�
 
     public void showTotalPay(){
         for(int i = 0 ; i < dayCount.length; i++){
-            System.out.print(dayWeek[i]);
+            System.out.print(calcCal.dayWeek[i]);
         }
         for(int j = 0 ; j < dayCount.length; j++){
-            System.out.print(dayCount[j]);
+            System.out.print(calcCal.dayCount[j]);
         }
-
+        System.out.println(calcCal.remainder);
+        System.out.println(calcCal.startDayInput);
         System.out.println(this.name+"의 총 급여는" +result+"입니다.");
     }
     public void ChangePay(){
@@ -64,14 +74,6 @@ class PayCalculation extends StartDayFunction{ //실제 급여계산을 이루�
     else if(minusPay>0){
         result -= 9160*minusPay;
         }
-    }
-
-    public PayCalculation(String name,int mon,int tue,int wed,
-                          int thur, int fri, int sat, int sun, int startDayInput, int plusPay, int minusPay) {
-        this.name = name;
-        this.mon = mon; this.tue = tue; this.wed = wed; this.thur = thur;
-        this.fri = fri; this.sat = sat; this.sun = sun; this.startDayInput = startDayInput;
-        this.plusPay = plusPay; this.minusPay = minusPay;
     }
 
     public void showPayResult(){

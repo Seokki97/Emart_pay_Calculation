@@ -1,19 +1,12 @@
 public class CalendarCalculator extends StartDayFunction{
-    int monResult=0, tueResult=0, wedResult=0,
-            thurResult=0, friResult=0, satResult=0, sunResult=0 ;
-
     int monStart,tueStart,wedStart,
             thurStart,friStart,satStart,sunStart;
 
-    int mon,tue,wed,thur,fri,sat,sun;
     int startDayInput;
-    String name;
-    int result=0;
-    int plusPay; int minusPay;
-
+    PayCalculation payCalc = new PayCalculation();
     public void inputTotal(){
-        share = startDayInput / 7;
-        remainder = (startDayInput % 7) -1;
+        share = payCalc.startDayInput / 7;
+        remainder = (payCalc.startDayInput % 7) -1;
         input(2022, 8, "월");
         setLeapYear();
         startFind();
