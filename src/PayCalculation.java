@@ -1,14 +1,14 @@
 class PayCalculation extends StartDayFunction{ //실제 급여계산을 이루어주는 클래스
     private final int pay = 9160;
-    int monResult=0, tueResult=0, wedResult=0,
-            thurResult=0, friResult=0, satResult=0, sunResult=0 ;
+    int monResult, tueResult, wedResult,
+            thurResult, friResult, satResult=0, sunResult=0 ;
 
     int monStart,tueStart,wedStart,
             thurStart,friStart,satStart,sunStart;
-    String name;
+    private String name;
     int startDayInput;
     int mon,tue,wed,thur,fri,sat,sun;
-    int result=0;
+    int result;
     int plusPay; int minusPay;
 
     public PayCalculation(String name,int mon,int tue,int wed,
@@ -54,23 +54,23 @@ class PayCalculation extends StartDayFunction{ //실제 급여계산을 이루�
     }
 
     public void showTotalPay(){
-        /*for(int i = 0 ; i < dayCount.length; i++){
-            System.out.print(calcCal.dayWeek[i]);
+        for(int i = 0 ; i < dayCount.length; i++){
+            System.out.print(dayWeek[i]);
         }
         for(int j = 0 ; j < dayCount.length; j++){
-            System.out.print(calcCal.dayCount[j]);
-        }*/
-      //  System.out.println(startDayInput);
+            System.out.print(dayCount[j]);
+        }
         System.out.println(this.name+"의 총 급여는" +result+"입니다.");
     }
 
-    public void ChangePay(){
+    public int ChangePay(){
     if(plusPay>0){
         result += 9160*plusPay;
     }
     else if(minusPay>0){
         result -= 9160*minusPay;
         }
+    return result;
     }
 
     public void showPayResult(){
