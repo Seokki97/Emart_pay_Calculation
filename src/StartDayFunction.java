@@ -94,47 +94,39 @@ public class StartDayFunction extends Calendar {  //중간에 들어오거나, �
         }
     }
 
+    public int[] shareCount(){
+        for(int i = 0 ; i<dayCount.length; i++) {
+            dayCount[i] += share;
+        }
+        return dayCount;
+    }
     public void endFind() { // input받은 요일과 같은 요일의 메소드를 불러옴
         if (this.firstDay.equals("월")) {
-            for(int i = 0 ; i<dayCount.length; i++){
-                dayCount[i] += share;
-            }
+            shareCount();
             removeMonCount();
         }
         if (this.firstDay.equals("화")) {
-            for(int i = 0 ; i<dayCount.length; i++){
-                dayCount[i] += share;
-            }
+            shareCount();
             removeTueCount();
         }
         if (this.firstDay.equals("수")) {
-            for(int i = 0 ; i<dayCount.length; i++){
-                dayCount[i] += share;
-            }
+            shareCount();
             removeWedCount();
         }
         if (this.firstDay.equals("목")) {
-            for(int i = 0 ; i<dayCount.length; i++){
-                dayCount[i] += share;
-            }
+            shareCount();
             removeThurCount();
         }
         if (this.firstDay.equals("금")) {
-            for(int i = 0 ; i<dayCount.length; i++){
-                dayCount[i] += share;
-            }
+            shareCount();
             removeFriCount();
         }
         if (this.firstDay.equals("토")) {
-            for(int i = 0 ; i<dayCount.length; i++){
-                dayCount[i] += share;
-            }
+            shareCount();
             removeSatCount();
         }
         if (this.firstDay.equals("일")) {
-            for(int i = 0 ; i<dayCount.length; i++){
-                dayCount[i] += share;
-            }
+            shareCount();
             removeSunCount();
         }
     }
