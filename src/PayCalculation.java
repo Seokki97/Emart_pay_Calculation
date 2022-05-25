@@ -1,28 +1,29 @@
 class PayCalculation extends StartDayFunction{ //실제 급여계산을 이루어주는 클래스
     private final int pay = 9160;
     int monResult, tueResult, wedResult,
-            thurResult, friResult, satResult=0, sunResult=0 ;
+            thurResult, friResult, satResult, sunResult;
 
     int monStart,tueStart,wedStart,
             thurStart,friStart,satStart,sunStart;
+
     private String name;
     int startDayInput;
     int mon,tue,wed,thur,fri,sat,sun;
     int result;
     int plusPay; int minusPay;
 
+
     public PayCalculation(String name,int mon,int tue,int wed,
-                          int thur, int fri, int sat, int sun,int startDayInput, int plusPay, int minusPay) {
+                          int thur, int fri, int sat, int sun, int startDayInput, int plusPay, int minusPay) {
         this.mon = mon; this.tue = tue; this.wed = wed; this.thur = thur;
-        this.fri = fri; this.sat = sat; this.sun = sun;
-        this.plusPay = plusPay; this.minusPay = minusPay;
-        this.name = name; this.startDayInput =startDayInput;
+        this.fri = fri; this.sat = sat; this.sun = sun; this.name = name;
+        this.startDayInput = startDayInput; this.plusPay = plusPay; this.minusPay = minusPay;
     }
 
     public void inputTotal(){
         share = startDayInput / 7;
         remainder = (startDayInput % 7) -1;
-        input(2022, 4, "금");
+        input(2022, 5, "일");
         setLeapYear();
         startFind();
         endFind();

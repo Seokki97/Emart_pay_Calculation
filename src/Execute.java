@@ -13,5 +13,15 @@ public class Execute {
         c2.seungA.showPayResult();
         c2.jungWon.showPayResult();
         c2.seBin.showPayResult();
+
+       // NewTest HyunSong = new NewTest("현송",1,0);
+
+
+
+
+
+
+
+
     }
 }
