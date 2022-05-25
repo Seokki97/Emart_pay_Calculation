@@ -8,13 +8,12 @@ public class Execute {
         c2.hyunSong.showPayResult();
         c2.heeJun.showPayResult();
         c2.jaeLim.showPayResult();
-        c2.minJi.showPayResult();
         c2.siYoung.showPayResult();
         c2.seungA.showPayResult();
         c2.jungWon.showPayResult();
         c2.seBin.showPayResult();
-
-       // NewTest HyunSong = new NewTest("현송",1,0);
+        c2.jongHyuk.showPayResult();
+        c2.doHyun.showPayResult();
 
 
 
